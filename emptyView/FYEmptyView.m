@@ -62,9 +62,7 @@
     FYEmptyView *emptyView = [[FYEmptyView alloc] initWithFrame:view.frame];
     emptyView.imageView.image = [UIImage imageNamed:imageName];
     emptyView.titleLabel.text = tips;
-    emptyView.emptyClickBlock = ^{
-        complete();
-    };
+    emptyView.emptyClickBlock = complete;
     [view addSubview:emptyView];
    
 }
@@ -83,7 +81,6 @@
     } else {
         emptyView.imageView.image = [UIImage imageNamed:@"quit"];
     }
-   
 }
 
 + (FYEmptyView *)EmptyForView:(UIView *)view {
