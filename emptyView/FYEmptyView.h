@@ -34,6 +34,6 @@ typedef void(^emptyClickBlock)(void);
  移除空白页
  @param view 在哪里显示空白数据
  */
-+(void)dissmissInView:(UIView *)view;
++(void)dissmissInView:(UIView *)view isHasData:(BOOL)isHasData;
 
 @end

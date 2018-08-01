@@ -24,10 +24,10 @@
     self.mainTableView.dataSource = self;
     self.mainTableView.tableFooterView = [UIView new];
     if (self.arr.count == 0) {
-   
-        [FYEmptyView showInView:self.view completc:^{
-            UIViewController *vc = [[UIViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
+        [FYEmptyView showInView:self.mainTableView completc:^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [FYEmptyView dissmissInView:self.mainTableView isHasData:NO];
+            });
         }];
         
     }
@@ -43,7 +43,6 @@
     }
     return cell;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
