@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "FYEmptyView.h"
+#import "UITableView+empety.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UITableViewEmpetyDelegate>
 @property(nonatomic,strong) UITableView *mainTableView;
 @property(nonatomic,strong) NSArray  *arr; //模拟的数据源
 @end
@@ -18,19 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.mainTableView = [[UITableView alloc] initWithFrame:self.view.frame style:(UITableViewStylePlain)];
+    self.mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, 200, 400) style:(UITableViewStylePlain)];
     [self.view addSubview:self.mainTableView];
     self.mainTableView.delegate = self;
     self.mainTableView.dataSource = self;
     self.mainTableView.tableFooterView = [UIView new];
-    if (self.arr.count == 0) {
-        [FYEmptyView showInView:self.mainTableView completc:^{
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [FYEmptyView dissmissInView:self.mainTableView isHasData:NO];
-            });
-        }];
-        
-    }
+    self.mainTableView.showEmptyView = YES;
+}
+
+-(void)emptyReloadData {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.mainTableView reloadData];
+    });
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -48,6 +48,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end

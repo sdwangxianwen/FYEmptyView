@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ECFB8B6224A17EE00273535 /* UITableView+empety.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECFB8B5224A17EE00273535 /* UITableView+empety.m */; };
 		213176B4211040FA00EAEAC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 213176B3211040FA00EAEAC6 /* AppDelegate.m */; };
 		213176B7211040FA00EAEAC6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213176B6211040FA00EAEAC6 /* ViewController.m */; };
 		213176BA211040FA00EAEAC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213176B8211040FA00EAEAC6 /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1ECFB8B4224A17EE00273535 /* UITableView+empety.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+empety.h"; sourceTree = "<group>"; };
+		1ECFB8B5224A17EE00273535 /* UITableView+empety.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+empety.m"; sourceTree = "<group>"; };
 		213176AF211040FA00EAEAC6 /* emptyView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emptyView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		213176B2211040FA00EAEAC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		213176B3211040FA00EAEAC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +86,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ECFB8B3224A15C900273535 /* FYEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				213176E7211041FA00EAEAC6 /* FYEmptyView.h */,
+				213176E8211041FA00EAEAC6 /* FYEmptyView.m */,
+				1ECFB8B4224A17EE00273535 /* UITableView+empety.h */,
+				1ECFB8B5224A17EE00273535 /* UITableView+empety.m */,
+			);
+			path = FYEmptyView;
+			sourceTree = "<group>";
+		};
 		213176A6211040FA00EAEAC6 = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +124,7 @@
 				213176B3211040FA00EAEAC6 /* AppDelegate.m */,
 				213176B5211040FA00EAEAC6 /* ViewController.h */,
 				213176B6211040FA00EAEAC6 /* ViewController.m */,
-				213176E7211041FA00EAEAC6 /* FYEmptyView.h */,
-				213176E8211041FA00EAEAC6 /* FYEmptyView.m */,
+				1ECFB8B3224A15C900273535 /* FYEmptyView */,
 				213176B8211040FA00EAEAC6 /* Main.storyboard */,
 				213176BE211040FC00EAEAC6 /* Assets.xcassets */,
 				213176C0211040FC00EAEAC6 /* LaunchScreen.storyboard */,
@@ -275,6 +288,7 @@
 				213176C5211040FC00EAEAC6 /* main.m in Sources */,
 				213176E9211041FA00EAEAC6 /* FYEmptyView.m in Sources */,
 				213176B4211040FA00EAEAC6 /* AppDelegate.m in Sources */,
+				1ECFB8B6224A17EE00273535 /* UITableView+empety.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
