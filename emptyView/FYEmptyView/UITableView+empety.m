@@ -63,29 +63,13 @@
         }];
         
     }else{
-        
-        CGFloat tableHeaderViewHeight = 0;
-        CGFloat tableFooterViewHeight = 0;
-        if (self.tableHeaderView) {
-            tableHeaderViewHeight = CGRectGetHeight(self.tableHeaderView.frame);
+        FYEmptyView *emptyView = [[FYEmptyView alloc] init];
+        if (self.dataSource && [self.dataSource respondsToSelector:@selector(customEmptyView)]) {
+            emptyView = [self.dataSource performSelector:@selector(customEmptyView)];
         }
-        if (self.tableFooterView) {
-            tableFooterViewHeight = CGRectGetHeight(self.tableFooterView.frame);
-        }
-        
-        CGFloat height = tableHeaderViewHeight + tableFooterViewHeight;
-        CGFloat tableViewHeight = CGRectGetHeight(self.frame);
-        if (height > tableViewHeight) {
-            return;
-        }
-        
-        // empty view
-        CGFloat offsetY = self.contentOffset.y < 0 ? self.contentOffset.y : 0;
-        CGRect bounds = CGRectMake(0, height, CGRectGetWidth(mmdView.frame), tableViewHeight - height + offsetY);
-        FYEmptyView *emptyView = [FYEmptyView initEmptyViewWithTitle:@"没有数据" imageName:@"quit" bounds:bounds backgroundColor:nil];
         __weak typeof(emptyView) weakEmptyView = emptyView;
         emptyView.emptyClickBlock = ^{
-          //图片的点击事件,重新加载
+            //图片的点击事件,重新加载
             if (self.delegate && [self.delegate respondsToSelector:@selector(emptyReloadData)]) {
                 [self.delegate performSelector:@selector(emptyReloadData) withObject:weakEmptyView];
             }
