@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "FYEmptyView.h"
 #import "UITableView+empety.h"
+#import <FYNetWorkHelper.h>
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UITableViewEmpetyDelegate>
 @property(nonatomic,strong) UITableView *mainTableView;
@@ -33,7 +34,13 @@
 }
 
 -(FYEmptyView *)customEmptyView {
-    FYEmptyView *emptyView = [FYEmptyView initEmptyViewWithTitle:@"没有数据" imageName:@"quit" bounds:self.mainTableView.bounds backgroundColor:[UIColor whiteColor]];
+    NSString *tips = @"";
+    if ([FYNetworkHelper isNetwork]) {
+        tips = @"没有数据";
+    } else {
+        tips = @"没有网络";
+    }
+    FYEmptyView *emptyView = [FYEmptyView initEmptyViewWithTitle:tips imageName:@"quit" bounds:self.mainTableView.bounds backgroundColor:[UIColor whiteColor]];
     return emptyView;
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

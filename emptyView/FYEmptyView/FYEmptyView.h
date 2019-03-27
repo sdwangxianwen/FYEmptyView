@@ -11,7 +11,7 @@
 typedef void(^emptyClickBlock)(void);
 @interface FYEmptyView : UIView
 @property(nonatomic,strong)  UIImageView *imageView;
-@property(nonatomic,copy) UILabel* titleLabel;
+@property(nonatomic,strong) UILabel* titleLabel;
 @property (nonatomic, strong)UIButton *emptyBtn;
 @property(nonatomic,copy) emptyClickBlock emptyClickBlock;
 

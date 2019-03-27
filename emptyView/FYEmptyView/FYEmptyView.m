@@ -41,22 +41,11 @@
 }
 
 -(void)emptyImageClick:(UITapGestureRecognizer *)tap {
-//    //点击图片的效果
-//    NSMutableArray *arrm = [NSMutableArray array];
-//    for (NSInteger i = 1; i < 13; i++) {
-//        NSString *imageName=[NSString stringWithFormat:@"%ld",(long)i];
-//        UIImage *image = [UIImage imageNamed:imageName];
-//        [arrm addObject:image];
-//    }
-//    
-//    self.imageView.animationImages = arrm;
-//    self.imageView.animationRepeatCount = 0;
-//    self.imageView.animationDuration = 1.5;
-//    [self.imageView startAnimating];
     if (self.emptyClickBlock) {
         self.emptyClickBlock();
     }
 }
+
 
 
 -(void)dealloc {
