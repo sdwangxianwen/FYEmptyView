@@ -62,6 +62,7 @@
 		213176DB211040FC00EAEAC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		213176E7211041FA00EAEAC6 /* FYEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYEmptyView.h; sourceTree = "<group>"; };
 		213176E8211041FA00EAEAC6 /* FYEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYEmptyView.m; sourceTree = "<group>"; };
+		21EFF317224B2A4400F9196A /* FYEmptyView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = FYEmptyView.podspec; sourceTree = SOURCE_ROOT; };
 		34AE49B9D60003A1AA73DB28 /* libPods-emptyViewUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-emptyViewUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DDE9280AF9DE376447A417 /* Pods-emptyViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emptyViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-emptyViewUITests/Pods-emptyViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7284F1705562160E62C2A009 /* Pods-emptyViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emptyViewTests.debug.xcconfig"; path = "Target Support Files/Pods-emptyViewTests/Pods-emptyViewTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 				213176B3211040FA00EAEAC6 /* AppDelegate.m */,
 				213176B5211040FA00EAEAC6 /* ViewController.h */,
 				213176B6211040FA00EAEAC6 /* ViewController.m */,
+				21EFF317224B2A4400F9196A /* FYEmptyView.podspec */,
 				1ECFB8B3224A15C900273535 /* FYEmptyView */,
 				213176B8211040FA00EAEAC6 /* Main.storyboard */,
 				213176BE211040FC00EAEAC6 /* Assets.xcassets */,
@@ -190,7 +192,6 @@
 				48DDE9280AF9DE376447A417 /* Pods-emptyViewUITests.debug.xcconfig */,
 				7C1A8C5BB11E873B9F567D80 /* Pods-emptyViewUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
